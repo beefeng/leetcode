@@ -1,4 +1,4 @@
-package com.beefeng.leetcode;
+package com.beefeng.leetcode.array;
 
 import java.util.HashMap;
 
@@ -25,9 +25,14 @@ public class TwoSum {
 
   public static void main(String args[]) {
     int[] numbers = { 2, 5, 7, 11, 15 };
-    int[] result = new TwoSum().twoSum(numbers, 9);
-    System.out.println("=======");
-    System.out.println(result[0]);
-    System.out.println(result[1] );
+    test(numbers, 9);
+
+    numbers = new int[]{ 0, 0, 0};
+    test(numbers, 0);
+  }
+
+  public static void test(int[] numbers, int target) {
+    int[] result = new TwoSum().twoSum(numbers, target);
+    System.out.println(String.format("%d, %d", result[0], result[1]));
   }
 }
